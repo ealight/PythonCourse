@@ -1,0 +1,77 @@
+Before Cloning
+
+PS C:\PythonCourse> git init .
+
+PS C:\PythonCourse> git status
+
+PS C:\PythonCourse> git add text1.txt
+PS C:\PythonCourse> git commit . -m "initial commit"
+
+PS C:\PythonCourse> git remote -v
+PS C:\PythonCourse> git remote add origin https://github.com/ealight/PythonCourse.git
+PS C:\PythonCourse> git remote -v
+origin  https://github.com/ealight/PythonCourse.git (fetch)
+origin  https://github.com/ealight/PythonCourse.git (push)
+PS C:\PythonCourse> git status
+
+PS C:\PythonCourse> git branch
+* master
+PS C:\PythonCourse> git branch -M main
+PS C:\PythonCourse> git branch
+* main
+
+PS C:\PythonCourse> git push -u origin main
+
+PS C:\PythonCourse> git checkout -b develop
+Switched to a new branch 'develop'
+PS C:\PythonCourse> git checkout -b branch_from_develop
+Switched to a new branch 'branch_from_develop'
+PS C:\PythonCourse> git status
+
+PS C:\PythonCourse> git add text1.txt
+PS C:\PythonCourse> git commit -m "added first line"
+
+PS C:\PythonCourse> git push -u origin branch_from_develop
+
+
+After Cloning
+
+C:\SepPythonCourse>git clone https://github.com/ealight/PythonCourse.git
+
+C:\SepPythonCourse>cd PythonCourse
+
+C:\SepPythonCourse\PythonCourse>git branch
+* main
+
+C:\SepPythonCourse\PythonCourse>git branch -l
+* main
+
+C:\SepPythonCourse\PythonCourse>git checkout -b develop
+Switched to a new branch 'develop'
+
+C:\SepPythonCourse\PythonCourse>git checkout -b another_from_develop
+Switched to a new branch 'another_from_develop'
+
+C:\SepPythonCourse\PythonCourse>git add .
+
+C:\SepPythonCourse\PythonCourse>git commit -m "another context in text file"
+
+C:\SepPythonCourse\PythonCourse>git push -u origin another_from_develop
+
+C:\SepPythonCourse\PythonCourse>git checkout develop
+Switched to branch 'develop'
+
+C:\SepPythonCourse\PythonCourse>git merge origin/branch_from_develop
+
+
+C:\SepPythonCourse\PythonCourse>git status
+
+
+C:\SepPythonCourse\PythonCourse>git merge origin/another_from_develop
+
+C:\SepPythonCourse\PythonCourse>git add text1.txt
+
+C:\SepPythonCourse\PythonCourse>git commit -m "resolved conflict"
+
+
+C:\SepPythonCourse\PythonCourse>git push -u origin develop
